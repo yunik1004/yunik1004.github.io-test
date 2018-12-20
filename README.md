@@ -1,5 +1,7 @@
 # yunik-website
 
+[![Build Status](https://travis-ci.com/yunik1004/yunik1004.github.io.svg?token=vSy5BcxjK9zzp7yqwxiK&branch=code)](https://travis-ci.com/yunik1004/yunik1004.github.io)
+
 ## Project setup
 ```
 npm install

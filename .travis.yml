@@ -47,6 +47,8 @@ after_success:
   - git config --global user.name "yunik1004"
   # Deploy to master branch
   - npm run build
-  - git checkout master
+  - mv dist docs
+  - git checkout -t origin/master
+  - git add .
   - git commit
-  - git push -u origin master
+  - git push -u origin master --force
