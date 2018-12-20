@@ -50,7 +50,6 @@ after_success:
   - cd dist
   - git init
   - git remote add origin https://github.com/yunik1004/yunik1004.github.io.git
-  - git checkout -t origin/master
   - git add .
   - git commit -m "Travis deploy"
-  - git push -u origin master --force
+  - git push origin master --force
