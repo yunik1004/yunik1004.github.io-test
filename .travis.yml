@@ -27,4 +27,4 @@ after_success:
   - npm run build
   - git checkout master
   - git commit
-  - git push
+  - git push -u origin master
