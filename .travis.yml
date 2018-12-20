@@ -15,9 +15,6 @@ branches:
   only:
     - code
 
-env:
-  - NODE_ENV=PROD
-
 sudo: required
 
 dist: trusty
