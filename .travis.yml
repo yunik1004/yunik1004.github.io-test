@@ -1,0 +1,30 @@
+# .travis.yml
+language: node_js
+
+os:
+  - linux
+
+node_js:
+  - "10"
+
+branches:
+  only:
+    - code
+
+install:
+  - npm install
+
+script:
+  # Test
+  - npm run test:e2e
+  - npm run test:unit
+
+after_success:
+  # Set git config
+  - git config --global user.email "yunik1004@gmail.com"
+  - git config --global user.name "yunik1004"
+  # Deploy to master branch
+  - npm run build
+  - git checkout master
+  - git commit
+  - git push
