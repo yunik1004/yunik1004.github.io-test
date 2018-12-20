@@ -50,5 +50,5 @@ after_success:
   - mv dist docs
   - git checkout -t origin/master
   - git add .
-  - git commit
+  - git commit -m "Travis deploy"
   - git push -u origin master --force
