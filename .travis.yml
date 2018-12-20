@@ -49,7 +49,9 @@ after_success:
   - npm run build
   - cd dist
   - git init
+  - git remote add origin https://github.com/yunik1004/yunik1004.github.io.git
   - git remote set-url origin https://github.com/yunik1004/yunik1004.github.io.git
+  - git remote -v
   - git add .
   - git commit -m "Travis deploy"
   - git push origin master --force
