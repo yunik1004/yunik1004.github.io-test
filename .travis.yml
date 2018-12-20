@@ -48,6 +48,7 @@ after_success:
   # Deploy to master branch
   - npm run build
   - cd dist
+  - git init
   - git remote add origin https://github.com/yunik1004/yunik1004.github.io.git
   - git checkout -t origin/master
   - git add .
