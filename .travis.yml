@@ -48,4 +48,4 @@ after_success:
   - git init
   - git add .
   - git -c user.name='travis' -c user.email='travis' commit -m "Travis deploy"
-  - git push -f -q https://yunik1004:$GITHUB_API_KEY@github.com/yunik1004/yunik1004.github.io.git &>/dev/null
+  - git push -f -q https://yunik1004:$GITHUB_API_KEY@github.com/yunik1004/yunik1004.github.io.git master &>/dev/null
