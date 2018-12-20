@@ -42,16 +42,10 @@ script:
   - npm run test:e2e
 
 after_success:
-  # Set git config
-  - git config --global user.email "yunik1004@gmail.com"
-  - git config --global user.name "yunik1004"
   # Deploy to master branch
   - npm run build
   - cd dist
   - git init
-  - git remote add origin https://github.com/yunik1004/yunik1004.github.io.git
-  - git remote set-url origin https://github.com/yunik1004/yunik1004.github.io.git
-  - git remote -v
   - git add .
-  - git commit -m "Travis deploy"
-  - git push origin master --force
+  - git -c user.name='travis' -c user.email='travis' commit -m "Travis deploy"
+  - git push -f -q https://yunik1004:$GITHUB_API_KEY@github.com/yunik1004/yunik1004.github.io.git &>/dev/null
